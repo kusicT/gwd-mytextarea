@@ -1,0 +1,106 @@
+{
+  "name": "Textarea",
+  "type": "my-textarea",
+  "tagName": "my-textarea",
+  "version": 1,
+  "customElementsVersion": 1,
+  "description": "A resizable textarea input element. Fires 'input' on each keystroke and 'change' on blur.",
+  "files": {
+    "js": ["my-textarea.js"],
+    "css": ["my-textarea.css"]
+  },
+  "attributes": [
+    {
+      "name": "placeholder",
+      "label": "Placeholder",
+      "type": "string",
+      "description": "Placeholder text shown when the textarea is empty.",
+      "defaultValue": "",
+      "gwdSpecific": {
+        "important": true
+      }
+    },
+    {
+      "name": "value",
+      "label": "Initial Value",
+      "type": "string",
+      "description": "Initial text content of the textarea.",
+      "defaultValue": "",
+      "gwdSpecific": {
+        "important": true
+      }
+    },
+    {
+      "name": "maxlength",
+      "label": "Max Length",
+      "type": "number",
+      "description": "Maximum number of characters allowed. Leave 0 for no limit.",
+      "defaultValue": "0",
+      "min": 0,
+      "gwdSpecific": {
+        "important": true
+      }
+    },
+    {
+      "name": "readonly",
+      "label": "Read Only",
+      "type": "boolean",
+      "description": "Makes the textarea read-only — text can be selected but not edited.",
+      "defaultValue": false
+    },
+    {
+      "name": "resize",
+      "label": "Resize",
+      "type": "string",
+      "description": "Controls which directions the user can resize the textarea.",
+      "defaultValue": "both",
+      "gwdSpecific": {
+        "important": true,
+        "type": "dropdown",
+        "items": ["both", "vertical", "horizontal", "none"]
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "input",
+      "label": "Input",
+      "description": "Fired on every keystroke while the textarea is focused. Use this for real-time value tracking.",
+      "parameters": []
+    },
+    {
+      "name": "change",
+      "label": "Change",
+      "description": "Fired when the user leaves the textarea after modifying its value. Equivalent to a blur-after-edit event.",
+      "parameters": []
+    }
+  ],
+  "methods": [
+    {
+      "name": "selectRange",
+      "label": "Select Text in Range",
+      "description": "Selects a portion of the textarea text between the given start and end character indices.",
+      "parameters": [
+        {
+          "name": "startIndex",
+          "label": "Start Index",
+          "type": "number",
+          "optional": false
+        },
+        {
+          "name": "endIndex",
+          "label": "End Index",
+          "type": "number",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "name": "selectAll",
+      "label": "Select All Text",
+      "description": "Selects all text in the textarea.",
+      "parameters": []
+    }
+  ],
+  "nestable": false
+}

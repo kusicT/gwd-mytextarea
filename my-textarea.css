@@ -1,0 +1,42 @@
+my-textarea {
+  display: inline-block;
+  box-sizing: border-box;
+  line-height: 0;
+  /* width/height set to fit-content by JS after reading GWD dimensions */
+}
+
+my-textarea .my-textarea-inner {
+  display: block;
+  box-sizing: border-box;
+  resize: both; /* overridden per-instance by JS */
+
+  /* Inherit visual styles from the host so GWD's CSS settings propagate */
+  color: inherit;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  font-variant: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  text-transform: inherit;
+  line-height: normal;
+  border-radius: inherit;
+
+  border: 1px solid #ccc;
+  padding: 6px 8px;
+  outline: none;
+  overflow: auto;
+}
+
+my-textarea .my-textarea-inner:focus {
+  border-color: #4a90e2;
+}
+
+my-textarea .my-textarea-inner:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
