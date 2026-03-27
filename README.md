@@ -1,4 +1,4 @@
-# GWD Textarea Component
+# Google Web Designer Textarea Component
 
 A custom Google Web Designer (GWD) component that adds a missing `textarea` UI element.
 
@@ -36,9 +36,10 @@ This project fills that gap with a lightweight custom element that can be droppe
 
 ## Installation in Google Web Designer
 
-1. Open Google Web Designer.
-2. Locate Custom Components in Components palette and click on PLUS sign, pick zipped file with these files.
-3. Insert the component into your design and configure attributes in the Properties panel.
+1. ZIP three project files into one zip archive.
+2. Open Google Web Designer.
+3. Locate Custom Components in Components palette and click on PLUS sign, pick zipped file with these files.
+4. Insert the component into your design and configure attributes in the Properties panel.
 
 ## Usage Notes
 
@@ -46,6 +47,3 @@ This project fills that gap with a lightweight custom element that can be droppe
 - After initialization, the host size switches to `fit-content` to follow user resizing.
 - Styling inherits from the host so GWD visual settings propagate into the textarea.
 
-## Development
-
-Default installation method is using zipped component files - so all these three files should be zipped in one file with any name.
